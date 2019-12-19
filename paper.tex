@@ -1,0 +1,144 @@
+\PassOptionsToPackage{bookmarks=false}{hyperref} 
+ \documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+%\usepackage{cite}
+\RequirePackage[utf8]{inputenc}     % UTF8 encoding
+\RequirePackage[english]{babel}     % english language
+\RequirePackage{microtype}          % improved kerning, layout
+\RequirePackage{graphicx}           % graphics
+\RequirePackage[caption=false,font=footnotesize]{subfig}
+\RequirePackage[hidelinks, bookmarks=false]{hyperref}
+\RequirePackage{caption}
+%\RequirePackage[bottom]{footmisc}
+\usepackage[hang,flushmargin]{footmisc}
+
+\usepackage{setspace}
+\setstretch{0.88}
+
+%
+
+
+% write PDF metadata
+\makeatletter
+\AtBeginDocument{
+% set pdfoptions
+\hypersetup{
+     pdftitle={Paper Title},
+     pdfauthor={Author},
+     pdfkeywords={Internet of Things}
+   }
+}
+\makeatother
+%pdfkeywords={IoT}
+
+%\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{textcomp}
+%\usepackage{algpseudocode}
+\graphicspath{ {images/} }
+%\usepackage{text comp}
+\usepackage{listings}
+\usepackage[nolist,nohyperlinks]{acronym}
+\usepackage{todonotes}
+\presetkeys{todonotes}{inline}{}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+
+\usepackage{url}
+\usepackage{xcolor}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+\lstdefinelanguage{json}{
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,    
+    backgroundcolor=\color{background},
+    literate=
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+\lstdefinestyle{json}{
+  float,
+  floatplacement=t,
+  %abovecaptionskip=-5pt,
+  belowcaptionskip=-15pt,
+  language=json, 
+  float=h, 
+  numbers=left, 
+  numberstyle=\tiny, 
+  stepnumber=1, 
+  numbersep=1pt, 
+  captionpos=b, 
+  xleftmargin=1em,
+  framexleftmargin=1em
+}
+\AtBeginDocument{
+\captionsetup{font={footnotesize}}
+\captionsetup[lstlisting]{belowskip=-100pt, aboveskip=6pt}  % no effect!
+\captionsetup[figure]{belowskip=-10pt, aboveskip=6pt}
+\captionsetup[table]{belowskip=-10pt, aboveskip=3pt}   
+}
+%\input{autoscale.par}
+\begin{document}
+
+\title{Paper Title}
+
+\author{
+  \IEEEauthorblockN{Muthuraman Chidambaram}
+  \IEEEauthorblockA{
+    \textit{Technical University of Munich (TUM)}\\
+    \textit{Munich, Germany}\\
+    \textit{muthuraman.chidambaram@tum.de}
+  }
+  % \and
+  % \IEEEauthorblockN{Person 2}
+  % \IEEEauthorblockA{ 
+  %   \textit{Technical University of Munich (TUM)}\\
+  %   \textit{Munich, Germany}\\
+  %   \textit{email}
+  % }
+}
+
+\maketitle
+
+
+
+\begin{abstract}
+
+
+\end{abstract}
+\cite{wotTD}
+\begin{IEEEkeywords}
+Internet of Things, Thing Description, CPS, Model-driven development, System Testing
+\end{IEEEkeywords}
+
+
+\begin{acronym}[ECU]
+\acro{iot}[IoT]{Internet of Things}
+\end{acronym}
+
+%\input{autoscalelit.par}
+\setstretch{1.1}
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+
+%\hyphenation{cryp-to-graphy}
+
+
+\end{document}
